@@ -1,0 +1,8 @@
+# Example CODEOWNERS
+# Replace with real users/teams.
+
+docs/en/  @iita-english-reviewers
+software/teensy/  @iita-teensy-maintainers
+software/raspberrypi/  @iita-rpi-maintainers
+hardware/electronics/  @iita-hw-maintainers
+.github/workflows/  @iita-devops

@@ -1,0 +1,57 @@
+name: Hardware issue / bug
+description: Problema de hardware (eléctrico, mecánico, integración)
+title: "[HW] "
+labels: ["type/hardware", "status/needs-triage"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - electronics (pcb/cables/solder)
+        - power (battery/regulators)
+        - sensors
+        - mechanics (3d/cnc/structure)
+        - integration (hw<->sw)
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Síntoma / falla observada
+      description: ¿Qué se ve/escucha/medimos?
+    validations:
+      required: true
+
+  - type: textarea
+    id: measurements
+    attributes:
+      label: Mediciones
+      description: Voltajes, corrientes, señales, temperatura, fotos, etc.
+      placeholder: |
+        - Vbat:
+        - 5V rail:
+        - Motor current:
+        - Osciloscopio:
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: ¿En qué condiciones ocurre? ¿Después de qué cambio?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Seguridad
+      options:
+        - label: Confirmé que no hay riesgo inmediato (batería/calor/corto)
+          required: false
+        - label: Si hay riesgo, el robot está fuera de servicio hasta resolverlo
+          required: false

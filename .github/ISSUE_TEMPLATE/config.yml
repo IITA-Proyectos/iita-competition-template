@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: IITA Competition Playbook
+    url: https://github.com/IITA-Proyectos/iita-competition-playbook
+    about: Políticas y estándares ICRS (ver docs/es).

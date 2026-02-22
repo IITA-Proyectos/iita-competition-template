@@ -1,0 +1,42 @@
+name: Research task
+description: Investigación técnica (alternativas, benchmarking, lectura de reglas/datasheets)
+title: "[RESEARCH] "
+labels: ["type/research", "status/needs-triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Pregunta / problema a investigar
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Entregables esperados
+      placeholder: |
+        - Resumen (1 página)
+        - Tabla comparativa
+        - Recomendación + riesgos
+        - Fuentes
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Fuentes (obligatorio)
+      description: Links a papers, docs oficiales, datasheets, reglas.
+      placeholder: |
+        - https://...
+        - https://...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: ai
+    attributes:
+      label: IA (si aplica)
+      options:
+        - label: Si usé IA, dejaré el prompt o un resumen de cómo la usé.
+          required: false

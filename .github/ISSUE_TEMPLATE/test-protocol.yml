@@ -1,0 +1,49 @@
+name: Test / Protocol
+description: Definir o ejecutar un protocolo de prueba
+title: "[TEST] "
+labels: ["type/test", "status/needs-triage"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo del test
+    validations:
+      required: true
+
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Protocolo paso a paso
+      placeholder: |
+        1. Setup...
+        2. Ejecutar...
+        3. Medir...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado / criterio de aprobación
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Resultados (cuando se ejecute)
+      description: Completar con mediciones, videos, logs.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: artifacts
+    attributes:
+      label: Evidencia adjunta
+      options:
+        - label: Fotos / video
+          required: false
+        - label: Logs
+          required: false
+        - label: Mediciones
+          required: false

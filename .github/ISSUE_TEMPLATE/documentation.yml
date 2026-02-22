@@ -1,0 +1,30 @@
+name: Documentation
+description: Mejorar o corregir documentación
+title: "[DOCS] "
+labels: ["type/docs", "status/needs-triage"]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: ¿Qué documentación hay que cambiar?
+      description: Indicar archivo(s) y el problema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: ¿Por qué?
+      description: Contexto (confuso, incorrecto, falta info, etc.)
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: translation
+    attributes:
+      label: Idiomas
+      options:
+        - label: Actualizaré docs/es (fuente)
+          required: false
+        - label: (L2) Revisaremos docs/en en PR de traducción
+          required: false
